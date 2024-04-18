@@ -1,12 +1,12 @@
 ---
-title: "Brownlows Bets"
+title: "Brownlow Bets"
 author: "Alfredo Acevedo"
 output: 
   html_document:
     number_sections: true
     toc: true
     toc_depth: 5
-date: "`r Sys.Date(4/11/2024)`"    
+date: "4/11/2024"    
 ---
 
 ```{r setup, include=FALSE}
@@ -37,7 +37,20 @@ There are 3 questions and there should be at least 3 separate commits, at least 
 The function will be given a class_size by number of students, odds, and Number_of_times brownlow made the bet.  It will give you back how much Brownlows earnings were. We will use it to answer our three questions below. If you can, improve this function by giving default values to some of its inputs. 
 
 # In the class and payoff as described  If you highered 40 brownlow substitute teachers to do the same thing that Brownlow did then.
+```{r}
+myBrLw <- numeric(1000)
+for(i in 1:1000){
+myBrLw[i] = BrLw()}
+```
+```{r}
+favstats(myBrLw)
+```
+
 ## what is their average earnings
+
+Their average earning is `r mean(myBrLw)` 
+
+
 ## the standard deviation and a 95% confidence interval for their earnings?
 
 When using the BrWl() code 1000 times we can find out how mant 35 students have the same birthday 
@@ -52,30 +65,40 @@ myBrLw[i] = BrLw()}
 ```{r}
 sorted <- sort (myBrLw)
 ```
-The confidence interval 95% IS 2~75
+A 95% confidence interval is `r print(sorted[25])` up to `r print(sort[975])`
+And a standard deviation is `r `
 
-```{R}
-print(sorted[25])
-print(sorted[975])
-```
+
 # What are the fair odds? Use manipulation of odds in the function to tune Brownlows earnings to zero. 
 
 
 <!--Decide on your methods:  In this section explain the approach you will take to attack the issue --- how will you decide on a likely estimate of professor Brownlow's earnings or losses after 637 bets. Also explain how you construct a 95% confidence interval about your estimate of his winnings !-->
 
+```{r}
+myBrLw <- numeric(1000)
+for(i in 1:1000){
+myBrLw[i] = BrLw(odds = 4.4)}
+```
 
+```{r}
+(sorted2 <-sort (myBrLw2))
+```
+A 95% confidence interval is `r print(sorted[25])` up to `r print(sort[975])`
 
 
 # What size of class makes the 2:1 bet fair?  Use manipulation of number of Students to tune Brownlows earnings to zero.
 
 <!--Explain and display the results of your method of coming up with the estimate of professor Brownlows betting profits!-->
 
+```{r}
+myBrLw3 <- numeric(400)
+for(i in 1:400){
+myBrLw3[i] = BrLw(numClass = 28.9)}
+hist(myBrLw3)
+```
 
 
-
-
-
-
+brownlow orginal bet, a class size of 28.9 students is when the bet would be fair
 
 # Discussion and Conclusion
 
