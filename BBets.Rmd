@@ -62,28 +62,28 @@ myBrLw <- numeric(1000)
 for(i in 1:1000){
 myBrLw[i] = BrLw()}
 ```
+  
 ```{r}
 sorted <- sort (myBrLw)
 ```
-A 95% confidence interval is `r print(sorted[25])` up to `r print(sort[975])`
-And a standard deviation is `r `
-
+  
+A 95% confidence interval is `r (sorted[25])` up to `r (sorted[975])`
+ And a standard deviation is `r sd(sorted)`
 
 # What are the fair odds? Use manipulation of odds in the function to tune Brownlows earnings to zero. 
-
 
 <!--Decide on your methods:  In this section explain the approach you will take to attack the issue --- how will you decide on a likely estimate of professor Brownlow's earnings or losses after 637 bets. Also explain how you construct a 95% confidence interval about your estimate of his winnings !-->
 
 ```{r}
-myBrLw <- numeric(1000)
+myBrLw2 <- numeric(1000)
 for(i in 1:1000){
-myBrLw[i] = BrLw(odds = 4.4)}
+myBrLw2[i] = BrLw(odds = 4.4)}
 ```
 
 ```{r}
 (sorted2 <-sort (myBrLw2))
 ```
-A 95% confidence interval is `r print(sorted[25])` up to `r print(sort[975])`
+A 95% confidence interval is `r (sorted2[25])` up to `r (sorted2[975])`
 
 
 # What size of class makes the 2:1 bet fair?  Use manipulation of number of Students to tune Brownlows earnings to zero.
@@ -104,3 +104,4 @@ brownlow orginal bet, a class size of 28.9 students is when the bet would be fai
 
 <!--Discussion and conclusion here.  If professor Brownlow is consistantly making or losing money how could he change his payout so that his profits center on zero?  Also discuss what size his class should be in order to have his current scheme balance at zero profit.!-->
 
+Brownlow was making about 283$ when the class size was 35. But if it was a fair bet size then that class would need to be around 28 or 29 students. 
